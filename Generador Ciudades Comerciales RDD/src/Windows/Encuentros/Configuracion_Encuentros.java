@@ -27,12 +27,22 @@ public class Configuracion_Encuentros extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnG_Dificultad = new javax.swing.ButtonGroup();
         cb_Tablas_Encuentros = new javax.swing.JComboBox<>();
         lbl_Tablas_Encuentros = new javax.swing.JLabel();
         btn_Save = new javax.swing.JButton();
         btn_Anadir_Tabla_Encuentro = new javax.swing.JButton();
         btn_Modificar_Tabla_Encuentro = new javax.swing.JButton();
         btn_Cancell = new javax.swing.JButton();
+        lbl_Dificultad = new javax.swing.JLabel();
+        rb_Easy = new javax.swing.JRadioButton();
+        rb_Medium = new javax.swing.JRadioButton();
+        rb_Hard = new javax.swing.JRadioButton();
+        rb_Deadly = new javax.swing.JRadioButton();
+        cb_NJugadores = new javax.swing.JComboBox<>();
+        lbl_NPlayers = new javax.swing.JLabel();
+        lbl_LvLPlayers = new javax.swing.JLabel();
+        cb_LvLPlayers = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,6 +78,30 @@ public class Configuracion_Encuentros extends javax.swing.JFrame {
             }
         });
 
+        lbl_Dificultad.setText("Dificultad:");
+
+        btnG_Dificultad.add(rb_Easy);
+        rb_Easy.setText("Fácil");
+
+        btnG_Dificultad.add(rb_Medium);
+        rb_Medium.setText("Media");
+
+        btnG_Dificultad.add(rb_Hard);
+        rb_Hard.setText("Difícil");
+
+        btnG_Dificultad.add(rb_Deadly);
+        rb_Deadly.setText("Mortal");
+
+        cb_NJugadores.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
+        cb_NJugadores.setSelectedIndex(3);
+        cb_NJugadores.setToolTipText("");
+
+        lbl_NPlayers.setText("Numero de Jugadores");
+
+        lbl_LvLPlayers.setText("Nivel de Jugadores");
+
+        cb_LvLPlayers.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -78,13 +112,22 @@ public class Configuracion_Encuentros extends javax.swing.JFrame {
                     .addComponent(lbl_Tablas_Encuentros)
                     .addComponent(cb_Tablas_Encuentros, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btn_Modificar_Tabla_Encuentro)
-                            .addComponent(btn_Cancell, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(rb_Deadly, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_Modificar_Tabla_Encuentro, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_Cancell, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lbl_Dificultad, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rb_Easy, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rb_Medium, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rb_Hard, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btn_Anadir_Tabla_Encuentro, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_Save, javax.swing.GroupLayout.Alignment.TRAILING))))
+                            .addComponent(btn_Anadir_Tabla_Encuentro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_Save, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lbl_NPlayers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lbl_LvLPlayers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cb_NJugadores, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cb_LvLPlayers, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(58, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -98,7 +141,25 @@ public class Configuracion_Encuentros extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_Anadir_Tabla_Encuentro)
                     .addComponent(btn_Modificar_Tabla_Encuentro))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 250, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_Dificultad)
+                    .addComponent(lbl_NPlayers))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb_Easy)
+                    .addComponent(cb_NJugadores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb_Medium)
+                    .addComponent(lbl_LvLPlayers))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb_Hard)
+                    .addComponent(cb_LvLPlayers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rb_Deadly)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_Save)
                     .addComponent(btn_Cancell))
@@ -108,20 +169,43 @@ public class Configuracion_Encuentros extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * 
+     * @param evt 
+     */
     private void btn_SaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SaveActionPerformed
-        // TODO add your handling code here:
+        //Implementar Guardado de Ajustes --> Estructura de Ficheros y Carpetas
+        Gen_Evts_Main_Menu menuGenEvts = new Gen_Evts_Main_Menu();
+        menuGenEvts.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btn_SaveActionPerformed
 
+    /**
+     * 
+     * @param evt 
+     */
     private void btn_Modificar_Tabla_EncuentroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Modificar_Tabla_EncuentroActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_Modificar_Tabla_EncuentroActionPerformed
 
+    /**
+     * 
+     * @param evt 
+     */
     private void btn_Anadir_Tabla_EncuentroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Anadir_Tabla_EncuentroActionPerformed
-        // TODO add your handling code here:
+        New_Table newTable = new New_Table();
+        newTable.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btn_Anadir_Tabla_EncuentroActionPerformed
 
+    /**
+     * 
+     * @param evt 
+     */
     private void btn_CancellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CancellActionPerformed
-        // TODO add your handling code here:
+        Gen_Evts_Main_Menu menuGenEvts = new Gen_Evts_Main_Menu();
+        menuGenEvts.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btn_CancellActionPerformed
 
     /**
@@ -160,11 +244,21 @@ public class Configuracion_Encuentros extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup btnG_Dificultad;
     private javax.swing.JButton btn_Anadir_Tabla_Encuentro;
     private javax.swing.JButton btn_Cancell;
     private javax.swing.JButton btn_Modificar_Tabla_Encuentro;
     private javax.swing.JButton btn_Save;
+    private javax.swing.JComboBox<String> cb_LvLPlayers;
+    private javax.swing.JComboBox<String> cb_NJugadores;
     private javax.swing.JComboBox<String> cb_Tablas_Encuentros;
+    private javax.swing.JLabel lbl_Dificultad;
+    private javax.swing.JLabel lbl_LvLPlayers;
+    private javax.swing.JLabel lbl_NPlayers;
     private javax.swing.JLabel lbl_Tablas_Encuentros;
+    private javax.swing.JRadioButton rb_Deadly;
+    private javax.swing.JRadioButton rb_Easy;
+    private javax.swing.JRadioButton rb_Hard;
+    private javax.swing.JRadioButton rb_Medium;
     // End of variables declaration//GEN-END:variables
 }
