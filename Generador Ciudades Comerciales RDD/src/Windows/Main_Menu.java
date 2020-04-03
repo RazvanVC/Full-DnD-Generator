@@ -32,6 +32,7 @@ public class Main_Menu extends javax.swing.JFrame {
         btn_Gen_Encuentros = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         btn_Gen_Encuentros.setFont(btn_Gen_Encuentros.getFont().deriveFont(btn_Gen_Encuentros.getFont().getSize()+13f));
         btn_Gen_Encuentros.setText("Generacion de Encuentros");
@@ -47,18 +48,19 @@ public class Main_Menu extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(123, Short.MAX_VALUE)
-                .addComponent(btn_Gen_Encuentros, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_Gen_Encuentros, javax.swing.GroupLayout.PREFERRED_SIZE, 354, Short.MAX_VALUE)
                 .addContainerGap(123, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
-                .addComponent(btn_Gen_Encuentros, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(389, Short.MAX_VALUE))
+                .addComponent(btn_Gen_Encuentros, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(397, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_Gen_EncuentrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Gen_EncuentrosActionPerformed

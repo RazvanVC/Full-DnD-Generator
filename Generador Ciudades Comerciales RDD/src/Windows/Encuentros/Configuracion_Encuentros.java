@@ -28,7 +28,6 @@ public class Configuracion_Encuentros extends javax.swing.JFrame {
     private void initComponents() {
 
         btnG_Dificultad = new javax.swing.ButtonGroup();
-        cb_Tablas_Encuentros = new javax.swing.JComboBox<>();
         lbl_Tablas_Encuentros = new javax.swing.JLabel();
         btn_Save = new javax.swing.JButton();
         btn_Anadir_Tabla_Encuentro = new javax.swing.JButton();
@@ -43,10 +42,9 @@ public class Configuracion_Encuentros extends javax.swing.JFrame {
         lbl_NPlayers = new javax.swing.JLabel();
         lbl_LvLPlayers = new javax.swing.JLabel();
         cb_LvLPlayers = new javax.swing.JComboBox<>();
+        cb_Tablas_Encuentros1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        cb_Tablas_Encuentros.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         lbl_Tablas_Encuentros.setText("Tabla de Encuentros");
 
@@ -102,15 +100,21 @@ public class Configuracion_Encuentros extends javax.swing.JFrame {
 
         cb_LvLPlayers.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" }));
 
+        cb_Tablas_Encuentros1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cb_Tablas_Encuentros1.setNextFocusableComponent(btn_Modificar_Tabla_Encuentro);
+        cb_Tablas_Encuentros1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb_Tablas_Encuentros1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(57, Short.MAX_VALUE)
+                .addContainerGap(60, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl_Tablas_Encuentros)
-                    .addComponent(cb_Tablas_Encuentros, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(rb_Deadly, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -121,31 +125,36 @@ public class Configuracion_Encuentros extends javax.swing.JFrame {
                             .addComponent(rb_Medium, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(rb_Hard, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btn_Save)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE))
                             .addComponent(btn_Anadir_Tabla_Encuentro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btn_Save, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lbl_NPlayers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbl_LvLPlayers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(cb_NJugadores, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cb_LvLPlayers, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(58, Short.MAX_VALUE))
+                            .addComponent(lbl_LvLPlayers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cb_LvLPlayers, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(cb_Tablas_Encuentros1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbl_Tablas_Encuentros, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
+                .addContainerGap(60, Short.MAX_VALUE)
                 .addComponent(lbl_Tablas_Encuentros)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cb_Tablas_Encuentros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cb_Tablas_Encuentros1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_Anadir_Tabla_Encuentro)
                     .addComponent(btn_Modificar_Tabla_Encuentro))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_Dificultad)
                     .addComponent(lbl_NPlayers))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rb_Easy)
                     .addComponent(cb_NJugadores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -159,14 +168,15 @@ public class Configuracion_Encuentros extends javax.swing.JFrame {
                     .addComponent(cb_LvLPlayers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rb_Deadly)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_Save)
                     .addComponent(btn_Cancell))
-                .addGap(21, 21, 21))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -207,6 +217,10 @@ public class Configuracion_Encuentros extends javax.swing.JFrame {
         menuGenEvts.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btn_CancellActionPerformed
+
+    private void cb_Tablas_Encuentros1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_Tablas_Encuentros1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cb_Tablas_Encuentros1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -251,7 +265,7 @@ public class Configuracion_Encuentros extends javax.swing.JFrame {
     private javax.swing.JButton btn_Save;
     private javax.swing.JComboBox<String> cb_LvLPlayers;
     private javax.swing.JComboBox<String> cb_NJugadores;
-    private javax.swing.JComboBox<String> cb_Tablas_Encuentros;
+    private javax.swing.JComboBox<String> cb_Tablas_Encuentros1;
     private javax.swing.JLabel lbl_Dificultad;
     private javax.swing.JLabel lbl_LvLPlayers;
     private javax.swing.JLabel lbl_NPlayers;
